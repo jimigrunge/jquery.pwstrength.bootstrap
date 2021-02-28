@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/ablanco/jquery.pwstrength.bootstrap.png?branch=master)](https://travis-ci.org/ablanco/jquery.pwstrength.bootstrap)
 [![Code Climate](https://codeclimate.com/github/ablanco/jquery.pwstrength.bootstrap.png)](https://codeclimate.com/github/ablanco/jquery.pwstrength.bootstrap)
 [![devDependency Status](https://david-dm.org/ablanco/jquery.pwstrength.bootstrap/dev-status.png)](https://david-dm.org/ablanco/jquery.pwstrength.bootstrap#info=devDependencies)
+[![](https://data.jsdelivr.com/v1/package/npm/pwstrength-bootstrap/badge?style=rounded)](https://www.jsdelivr.com/package/npm/pwstrength-bootstrap)
 
 The jQuery Password Strength Meter is a plugin for Twitter Bootstrap that
 provides rulesets for visualy displaying the quality of a users typed in
@@ -174,20 +175,25 @@ $(document).ready(function () {
 ```
 
 
-## Extra security
+## Extra restrictions
 
 The plugin comes with two validation rules deactivated by default. One checks
-for too many character repetitions, and the other checks the number of
-character classes used. An easy way to increase the security of the passwords
-is to activate this two rules:
+the length of the password and penalizes it if it's too long; and the other
+checks if the password contains a banned char, and penalizes it if it does.
+
+You can configure the max length of the password by using the option `maxChar`.
+You can also configure the invalid chars by using the option
+`invalidCharsRegExp`.
+
+If you need these restrictions you just need to activate this two rules:
 
 ```javascript
 $(document).ready(function () {
     var options = {};
     options.rules = {
         activated: {
-            wordTwoCharacterClasses: true,
-            wordRepetitions: true
+            wordMaxLength: true,
+            wordInvalidChar: true
         }
     };
     $(':password').pwstrength(options);
@@ -298,7 +304,7 @@ npm install -d
 grunt test
 ```
 
-It will check all the source files with [JSLint](http://jslint.com) and run the
+It will check all the source files with [ESLint](https://eslint.org/) and run the
 tests, which are written with [Jasmine](http://jasmine.github.io/). You'll find
 the tests source code in the `spec` directory.
 

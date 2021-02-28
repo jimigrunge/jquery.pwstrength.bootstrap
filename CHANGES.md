@@ -1,8 +1,71 @@
 # CHANGELOG
 
-## 2.1.4dev
+## 3.0.9
+
+- Add jsdelivr entry in package.json.
+- Update dev dependencies.
+
+## 3.0.8
+
+- Start using peerDependencies instead of regular dependencies.
+
+## 3.0.7
+
+- Fix dependencies version mess.
+
+## 3.0.6
+
+- Update dependencies.
+
+## 3.0.5
+
+- Apply Prettier code formatter.
+- Replace JSLint with ESLint.
+- Add new rules.specialCharClass option to personalize special chars
+  detection.
+- Separate progress bar and popover widgets to their own files.
+
+## 3.0.4
+
+- Fix ruleIsMet method, include added custom validation rules.
+- Fix conflict between progressBarMinWidth and progressBarEmptyPercentage
+  options.
+
+## 3.0.3
+
+- Add Arabic localization.
+- Add Norwegian localization.
+- Add new ui.progressBarMinWidth option to control the minimum width of the
+  progress bar.
+
+## 3.0.2
+
+- Add Czech localization.
+- Bugfix with popovers in Bootstrap 4.2.X versions.
+
+## 3.0.1
+
+- Bugfix in progress bar colors in Bootstrap 3.
+
+## 3.0.0
+
+- Bootstrap 4 by default.
+- Improved support for Bootstrap 4.
+
+## 2.2.1
+
+- Bugfix in the common passwords rule.
+
+## 2.2.0
+
+- Add new rule to penalize common passwords.
+
+## 2.1.4
 
 - Thai localization.
+- Fix typo in German localization.
+- Activate by default the extra security rules.
+- Make the invalid chars optional rule configurable.
 
 ## 2.1.3
 
